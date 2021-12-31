@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>Our Love Story</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<style type="text/css">
+		@font-face {
+			font-family: digit;
+			src: url('digital-7_mono.ttf') format("truetype");
+		}
+	</style>
+	<link href="css/default.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/garden.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+</head>
+
+<body>
+	<div id="mainDiv">
+		<div id="content">
+			<div id="code">
+				<span class="comments">/**</span><br />
+				<span class="space"/><span class="comments">* 我们在1024前相遇,那时我的愿望还是想找个女朋友。</span><br />
+				<span class="space"/><span class="comments">* 10月26日，你来找我讨论工作坊，在电梯间我们第二次有了线下交流，那时候我觉得这女孩真有意思。之后。。。</span><br />
+				<span class="space"/><span class="comments">*/</span><br />
+				Boy i = <span class="keyword">new</span> Boy(<span class="string">"wangchongjin"</span>);<br />
+				Girl u = <span class="keyword">new</span> Girl(<span class="string">"chenyihan"</span>);<br />
+				<span class="comments">// 11月6日，我们看了第一场电影。那天，北京下着雨夹雪。你也刚带完本。看完电影，我知道我完蛋了，我又一次陷入了我之前搞不定、期待又不敢做的情感旋涡中。</span><br />
+				i.love(u);<br />
+				<span class="comments">// 11月14日，我们一起吃了肉肉，去看了《扬名立万》。我再次确认，我喜欢这个女孩。这是一种互相吸引发自心底的喜欢，很存粹。但，，可能也很容易破碎。</span><br />
+				u.accepted();<br />
+				<span class="comments">// 11月25日，你第一次来我家，我们吃着烧烤，你写着作业。这种简单的幸福真的让我很快乐。此刻我知道，这次即便又像以前那样粉身碎骨，我也心甘情愿。</span><br />
+				i.miss(u);<br />
+				<span class="comments">// 12月4日，你第二次来我家，由于我的无知导致我犯下无法弥补的错误。我知道我一定要用行动弥补，并且一定要让这个女孩幸福快乐.</span><br />
+				i.takeCareOf(u);<br />
+				<span class="comments">// 12月6日帮你做了算法作业，你说这就是爱情。12月9日，给你配了钥匙，又担心你退行性大出血而熬了姜枣红糖水。</span><br />
+				<span class="comments">// 12月17日周五，你第一次主动来我这，那是我最开心的一天。我很喜欢那个对我聊的天南海北耳朵都红了的那个真实的逸涵。</span><br />
+				<span class="comments">// 听说人这一辈子会恋爱两次，一次是初恋，懵懂且莽撞，还不了解生活的苦。另一次是知道了生活的不易，想着用余生来陪你.</span><br />
+				<span class="comments">// 而当我们又遇到问题，变得犹豫时，就会陷入下面这个循环。</span><br />
+				<span class="keyword">boolean</span> isHesitate = <span class="keyword">true</span>;<br />
+				<span class="keyword">while</span> (isHesitate) {<br />
+				<span class="placeholder"/><span class="comments">// 我很想和你过完这一生，体验一次完完整整的爱情，想带你回家是真的想和你有个未来。所以我会等你！</span><br />
+				<span class="placeholder"/>i.waitFor(u);<br />
+				<span class="placeholder"/><span class="comments">// 我希望我们都不要逃避，等思考结束，我们就跳出这个循环好吗。</span><br />
+				<span class="placeholder"/>isHesitate = u.thinkOver();<br />
+				}<br />
+				<span class="comments">// 我爱你。</span><br />
+				i.love(u);<br />
+				<span class="comments">// 我会为了我们两个人的家，努力工作，每年带你体检。每天都能亲耳听到你说“我爱你”。</span><br />
+				i.marry(u);<br />
+				i.liveHappilyWith(u);<br />
+			</div>
+			<div id="loveHeart">
+				<canvas id="garden"></canvas>
+				<div id="words">
+					<div id="messages">
+						亲爱的逸涵, I have fallen in love with you for
+						<div id="elapseClock"></div>
+					</div>
+					<div id="loveu">
+						Love u forever and ever.<br/>
+						<div class="signature">-- 崇锦</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- <div id="copyright">
+			Inspired by <a href="http://www.openrise.com/lab/FlowerPower/">cyh</a> <br />
+			Copyright © 2021 <a href='http://hackerzhou.me'>loqiu</a> 2021-2022
+		</div> -->
+	</div>
+	<script type="text/javascript">
+		var offsetX = $("#loveHeart").width() / 2;
+		var offsetY = $("#loveHeart").height() / 2 - 55;
+		var together = new Date();
+		together.setFullYear(2021, 10, 6);
+		together.setHours(21);
+		together.setMinutes(30);
+		together.setSeconds(0);
+		together.setMilliseconds(0);
+		
+		if (!document.createElement('canvas').getContext) {
+			var msg = document.createElement("div");
+			msg.id = "errorMsg";
+			msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+			document.body.appendChild(msg);
+			$("#code").css("display", "none")
+			$("#copyright").css("position", "absolute");
+			$("#copyright").css("bottom", "10px");
+		    document.execCommand("stop");
+		} else {
+			setTimeout(function () {
+				startHeartAnimation();
+			}, 5000);
+
+			timeElapse(together);
+			setInterval(function () {
+				timeElapse(together);
+			}, 500);
+
+			adjustCodePosition();
+			$("#code").typewriter();
+		}
+	</script>
+</body>
+</html>
